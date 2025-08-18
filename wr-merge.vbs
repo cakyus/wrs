@@ -11,8 +11,8 @@ sub main
   process_delete "POWERPNT.EXE"
 
   console_debug "start"
-  xl_file = getcwd & "\merge.xlsx"
-  pt_file = getcwd & "\merge.pptx"
+  xl_file = getcwd & "\data.xlsx"
+  pt_file = getcwd & "\data.pptx"
   
   set xl = CreateObject("Excel.Application")
   xl.Visible = true
