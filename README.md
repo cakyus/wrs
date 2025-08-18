@@ -12,7 +12,7 @@
 
 The PowerPoint and Excel file must have the same name.
 
-### Replace text by cell value
+### Replace text with cell value
 
 Replace `${Sheet1.A1}` inside PowerPoint with the value of cell `A1` 
 in sheet `Sheet1`.
