@@ -1,11 +1,15 @@
 // @link https://documentation.help/MS-Office-JScript/jstutor.htm
 
-ppt_files = get_ppt_files();
-
-for (i in ppt_files) {
-  f = ppt_files[i];
-  console_debug(f.Name);
+function main() {
+  console.log('Hello World');
 }
+
+// ppt_files = get_ppt_files();
+
+// for (i in ppt_files) {
+//   f = ppt_files[i];
+//   console_debug(f.Name);
+// }
 
 // Get all ppt files in script directory
 // @return array
@@ -43,12 +47,26 @@ function collection2array(collection) {
   return items;
 }
 
-function console_debug(message) {
-  WScript.Echo("DEBUG: " + message);
+// -- Emulate Javacript Standard Library --
+
+function Console() {
+
+  this.debug = function(message) {
+    WScript.Echo("DEBUG: " + message);
+  };
+
+  this.error = function(message) {
+    WScript.Echo("ERROR: " + message);
+  };
+
+  this.log = function(message) {
+    WScript.Echo("LOG: " + message);
+  };
 }
 
-function console_error(message) {
-  WScript.Echo("ERROR : " + message);
-  WScript.Quit();
-}
+// -- Bootstrap
+
+var console = new Console;
+
+main();
 
