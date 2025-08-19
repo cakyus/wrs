@@ -26,7 +26,7 @@ from range `A1:B2` in sheet `Sheet1`.
 
 TODO
 
-## Planned Features
+## Furthermore
 
- 1. use JScript engine intead of VBScript
+Read [INTERNAL](INTERNAL.md) for the reason why an alternative solution have been choosen.
 
