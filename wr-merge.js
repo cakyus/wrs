@@ -2,9 +2,11 @@
 
 
 function main() {
-  console.log('Hello World');
+  var xhr = new XMLHttpRequest;
+  xhr.open('GET', 'https://www.example.com/', false);
+  xhr.send();
+  console.log(xhr.responseText);
 }
-
 
 // ppt_files = get_ppt_files();
 
@@ -49,7 +51,12 @@ function collection2array(collection) {
   return items;
 }
 
-// -- Emulate Javacript Standard Library --
+// -- Javacript Standard Library --
+
+function XMLHttpRequest() {
+  var xhr = new ActiveXObject('MSXML2.XMLHTTP');
+  return xhr;
+}
 
 function Console() {
 
